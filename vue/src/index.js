@@ -1,8 +1,11 @@
 // Modules
 const express = require('express');
 const morgan = require('morgan');
+const someModule = require('./modules/module');
 
 const app = express();
+
+someModule.test();
 
 // Settings
 app.set('port', process.env.PORT || 3000);

@@ -5,9 +5,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   build: {
-    //manifest: true,
     rollupOptions: {
-      input: {//"./src/app/index.js",
+      input: {
         bundle: './src/app/index.js'
       },
       output: {
