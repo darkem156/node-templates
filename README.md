@@ -17,14 +17,11 @@ function cnp()
     echo "Select a Template to Create Your Project"
     return
   fi
-
-  repo="https://github.com/darkem156/node-templates/trunk/"$1
   
   git svn clone https://github.com/darkem156/node-templates/trunk/$1
 
   if [[ $2 == "-d" ]]; then
     if [[ $3 != "" ]]; then
-      echo "$3"
       mv $1 $3
       return
     else
@@ -38,7 +35,7 @@ function cnp()
 }
 ~~~
 
-2. Now, you can run the following command on the direcotory where you want to creaate your project, for example, a vue project:
+2. Now, you can run the following command on the directory where you want to create your project. For example, a vue project:
 ~~~
 cnp vue
 ~~~
